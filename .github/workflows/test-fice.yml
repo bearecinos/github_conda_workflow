@@ -31,14 +31,14 @@ jobs:
           path: ~/conda_pkgs_dir
           key:
             ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{
-            hashFiles('github_conda_workflow/environment.yml') }}
+            hashFiles('environment.yml') }}
 
       - name: Install Miniconda
         # if: steps.cache-conda.outputs.cache-hit != 'true'
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: fenics_ice
-          environment-file: github_conda_workflow/environment.yml
+          environment-file: environment.yml
           channel-priority: strict
           auto-update-conda: true
           use-only-tar-bz2: true # necessary for caching
