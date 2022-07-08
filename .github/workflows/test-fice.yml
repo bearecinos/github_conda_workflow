@@ -51,5 +51,5 @@ jobs:
 
       # We install fenics_ice and tlm_adjoint as developing modules
       - name: List files in the repository
-          run: |
-            ls $GITHUB_WORKSPACE
+        run: |
+          ls $GITHUB_WORKSPACE
