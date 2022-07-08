@@ -10,8 +10,6 @@ jobs:
 
       # Get fice code
       - uses: actions/checkout@v2
-        with:
-          path: 'github_conda_workflow'
 
       # Get miniconda & prerequisites
       # TODO cache! https://github.com/marketplace/actions/setup-miniconda
