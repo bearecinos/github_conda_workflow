@@ -37,7 +37,7 @@ jobs:
       - name: mamba info
         shell: bash -l {0}
         run: |
-          micromamba info -a
+          micromamba info
           micromamba list
           micromamba config --show-sources
           micromamba config --show
