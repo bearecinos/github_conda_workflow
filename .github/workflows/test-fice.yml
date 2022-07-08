@@ -48,10 +48,10 @@ jobs:
           micromamba info
           micromamba list
 
-      - name: pip develop
-          shell: bash -l {0}
-          run: |
-            ls $GITHUB_WORKSPACE
+#      - name: pip develop
+#          shell: bash -l {0}
+#          run: |
+#            ls $GITHUB_WORKSPACE
 #            pip install --upgrade git+
 #            pip install --upgrade git+
 #            conda develop $GITHUB_WORKSPACE/tlm_adjoint
