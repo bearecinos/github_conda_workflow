@@ -39,5 +39,4 @@ jobs:
         run: |
           micromamba info
           micromamba list
-          micromamba config --show-sources
           micromamba config --show
