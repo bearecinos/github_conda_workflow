@@ -11,6 +11,7 @@ jobs:
       # Get fice code
       - uses: actions/checkout@v2
         with:
+          repository: 'EdiGlacUQ/fenics_ice'
           path: 'fenics_ice'
 
       # Get tlm-adjoint code
@@ -31,7 +32,7 @@ jobs:
           activate-environment: anaconda-client-env
           use-mamba: true
 
-      - name: Install Conda environment from environment.yml
+      - name: Install mamba environment from fenics_ice/environment.yml
         # if: steps.cache-conda.outputs.cache-hit != 'true'
         uses: mamba-org/provision-with-micromamba@main
         with:
