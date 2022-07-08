@@ -25,21 +25,21 @@ jobs:
             ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{
             hashFiles('environment.yml') }}
 
-      - name: Install Miniconda
+      - name: Install Conda environment from environment.yml
         # if: steps.cache-conda.outputs.cache-hit != 'true'
-        uses: conda-incubator/setup-miniconda@v2
+        uses: mamba-org/provision-with-micromamba@main
         with:
-          activate-environment: fenics_ice
+          environment-name: fenics_ice
           environment-file: environment.yml
           channel-priority: strict
-          auto-update-conda: true
-          use-only-tar-bz2: true # necessary for caching
+          #auto-update-conda: true
+          #use-only-tar-bz2: true # necessary for caching
 
       # Get conda info
-      - name: Conda info
-        shell: bash -l {0}
-        run: |
-          conda info -a
-          conda list
-          conda config --show-sources
-          conda config --show
+#      - name: Conda info
+#        shell: bash -l {0}
+#        run: |
+#          conda info -a
+#          conda list
+#          conda config --show-sources
+#          conda config --show
