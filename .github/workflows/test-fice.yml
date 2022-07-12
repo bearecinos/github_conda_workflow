@@ -11,8 +11,8 @@ jobs:
       # Get fice code
       - uses: actions/checkout@v2
         with:
-          repository: 'bearecinos/fenics_ice'
-          path: 'fenics_ice/setup_f'
+          repository: 'bearecinos/fenics_ice/setup_f'
+          path: 'fenics_ice'
 
       # Get tlm-adjoint code
       - uses: actions/checkout@v2
