@@ -11,7 +11,7 @@ jobs:
       # Get fice code
       - uses: actions/checkout@v2
         with:
-          repository: 'EdiGlacUQ/fenics_ice'
+          repository: 'bearecinos/fenics_ice'
           path: 'fenics_ice'
 
       # Get tlm-adjoint code
@@ -49,11 +49,12 @@ jobs:
           micromamba info
           micromamba list
 
-#      # We install fenics_ice and tlm_adjoint as developing modules
-#      - name: Install repositories as dev modules
-#        run: |
-#          ls $GITHUB_WORKSPACE
-#          cd $GITHUB_WORKSPACE/fenics_ice
-#          pip install -e .
-#          cd $GITHUB_WORKSPACE/tlm_adjoint
-#          pip install -e .
+      # We install fenics_ice and tlm_adjoint as developing modules
+      - name: Install repositories as dev modules
+        run: |
+          ls $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE/fenics_ice
+          git checkout setup_f
+          pip install -e .
+          cd $GITHUB_WORKSPACE/tlm_adjoint
+          pip install -e .
