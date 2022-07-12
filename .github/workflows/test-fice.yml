@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: 'bearecinos/fenics_ice'
-          path: 'fenics_ice'
+          path: 'fenics_ice/setup_f'
 
       # Get tlm-adjoint code
       - uses: actions/checkout@v2
@@ -54,8 +54,6 @@ jobs:
         run: |
           ls $GITHUB_WORKSPACE
           cd $GITHUB_WORKSPACE/fenics_ice
-          git pull
-          git checkout setup_f
           pip install -e .
           cd $GITHUB_WORKSPACE/tlm_adjoint
           pip install -e .
