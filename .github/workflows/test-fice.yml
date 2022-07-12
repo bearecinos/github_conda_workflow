@@ -54,7 +54,7 @@ jobs:
         run: |
           ls $GITHUB_WORKSPACE
           cd $GITHUB_WORKSPACE/fenics_ice
-          git checkout setup_f
+          git checkout --track origin/setup_f
           pip install -e .
           cd $GITHUB_WORKSPACE/tlm_adjoint
           pip install -e .
