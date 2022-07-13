@@ -33,16 +33,14 @@ in the meantime there is a `User guide`_ and the basic installation info.
 Conda installation:
 ------------------
 
-1. Clone the repository:
+1. Clone the repository::
 
-.. code-block:: bash
-git clone https://github.com/EdiGlacUQ/fenics_ice.git
+    git clone https://github.com/EdiGlacUQ/fenics_ice.git
 
 2. To install via `Conda`_ use `install.sh`_, this script will install and test FEniCS_ice.
-Be sure to set **CONDA_HOME** before installing, and add:
+Be sure to set **CONDA_HOME** before installing, and add::
 
-.. code-block:: bash
-export FENICS_ICE_BASE_DIR="/path/to/fenics_ice/repo"
+    export FENICS_ICE_BASE_DIR="/path/to/fenics_ice/repo"
 
 to your .bashrc.
 
@@ -50,12 +48,10 @@ to your .bashrc.
 
 4. Run all serial tests::
 
-.. code-block:: bash
     pytest -v --order-scope=module --color=yes
 
 5. Run all parallel tests::
 
-.. code-block:: bash
     mpirun -n 2 pytest -v --order-scope=module --color=yes
 
 
@@ -64,7 +60,6 @@ To install via Mamba:
 
 1. Clone the repository and create `Mamba`_ environment::
 
-.. code-block:: bash
     cd fenics_ice
     mamba env create -f environment.yml
     pip install -e .
@@ -73,19 +68,16 @@ Make sure the environment "fenics_ice" is activated.
 
 2. Install `tlm_adjoint`_::
 
-.. code-block:: bash
     git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
     cd tlm_adjoint
     pip install -e .
 
 3. Run all serial tests::
 
-.. code-block:: bash
     pytest -v --order-scope=module --color=yes
 
 4. Run all parallel tests::
 
-.. code-block:: bash
     mpirun -n 2 pytest -v --order-scope=module --color=yes
 
 
