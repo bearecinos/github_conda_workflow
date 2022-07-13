@@ -57,6 +57,7 @@ To install via Mamba:
     mamba env create -f environment.yml
     pip install -e .
 Make sure the environment "fenics_ice" is activated.
+
 2. Install `tlm_adjoint`_::
 
     git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
