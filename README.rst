@@ -13,19 +13,80 @@ prediction about a quantity of interest (e.g. ice mass loss); 4) Propagating the
 in the inferred parameters to the model prediction. 
 
 The code contains a dynamic solver for ice-sheet flow which implements the 
-Shallow-Shelf Approximation ([MacAyeal et al, 1989.](https://doi.org/10.1029/JB094iB04p04071)) 
+Shallow-Shelf Approximation (`MacAyeal et al, 1989.`_)
 and approximates parameter covariance using a low-rank approximation to 
 the inverse of the cost-function Hessian. The code uses Algorithmic Differentiation 
 to find sensitivity of time-evolving Quantities of Interest to parameter sets, 
 allowing projections of parameter uncertainty forward in time.
 
+.. _MacAyeal et al, 1989.: https://doi.org/10.1029/JB094iB04p04071
+
 
 Installation, documentation
 ---------------------------
 
-The documentation website currently in construction, 
-in the meantime there is a 
-[User guide](https://github.com/EdiGlacUQ/fenics_ice/tree/main/user_guide). 
+The documentation website currently in construction,
+in the meantime there is a `User guide`_ and the basic installation info.
+
+.. _User guide: https://github.com/EdiGlacUQ/fenics_ice/tree/main/user_guide
+
+Conda installation:
+------------------
+
+1. Clone the repository:
+
+.. code-block:: bash
+git clone https://github.com/EdiGlacUQ/fenics_ice.git
+
+2. To install via `Conda`_ use `install.sh`_, this script will install and test FEniCS_ice.
+Be sure to set **CONDA_HOME** before installing, and add:
+
+.. code-block:: bash
+export FENICS_ICE_BASE_DIR="/path/to/fenics_ice/repo"
+
+to your .bashrc.
+
+3. Run install.sh.
+
+4. Run all serial tests.
+
+.. code-block:: bash
+pytest -v --order-scope=module --color=yes
+
+5. Run all parallel tests.
+
+.. code-block:: bash
+mpirun -n 2 pytest -v --order-scope=module --color=yes
+
+
+To install via Mamba:
+---------------------
+
+1. Clone the repository and create `Mamba`_ environment:
+
+.. code-block:: bash
+cd fenics_ice
+mamba env create -f environment.yml
+pip install -e .
+
+Make sure the environment "fenics_ice" is activated.
+
+2. Install `tlm_adjoint`_:
+
+.. code-block:: bash
+git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
+cd tlm_adjoint
+pip install -e .
+
+3. Run all serial tests.
+
+.. code-block:: bash
+pytest -v --order-scope=module --color=yes
+
+4. Run all parallel tests.
+
+.. code-block:: bash
+mpirun -n 2 pytest -v --order-scope=module --color=yes
 
 
 Code source
@@ -39,6 +100,10 @@ Code source
 .. _issue tracker: https://github.com/EdiGlacUQ/fenics_ice/issues
 .. _pull request: https://github.com/EdiGlacUQ/fenics_ice/pulls
 
+.. _Conda: https://docs.conda.io/en/latest/miniconda.html
+.. _install.sh: https://github.com/EdiGlacUQ/fenics_ice/blob/main/install.sh
+.. _Mamba: https://mamba.readthedocs.io/en/latest/installation.html#micromamba
+.. _tlm_adjoint: https://github.com/EdiGlacUQ/tlm_adjoint
 
 About
 -----
