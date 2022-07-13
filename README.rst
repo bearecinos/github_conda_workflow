@@ -90,7 +90,7 @@ About
 -----
 :Version:
     .. image:: https://img.shields.io/badge/python-3.8%2B-blue
-        :target: https://pypi.python.org/pypi/oggm
+        :target: https://www.python.org/
         :alt: Pypi version
         
 :Citation:
@@ -106,10 +106,6 @@ About
     .. image:: https://img.shields.io/badge/test-passing-green
         :target: https://github.com/EdiGlacUQ/fenics_ice/actions/workflows/test-fice.yml
         :alt: Linux build status
-
-    .. image:: https://img.shields.io/badge/Cross-validation-blue.svg
-        :target: https://cluster.klima.uni-bremen.de/~oggm/ref_mb_params/oggm_v1.4/crossval.html
-        :alt: Mass balance cross validation
 
     .. image:: 
         :target: 
