@@ -38,11 +38,9 @@ Conda installation:
     git clone https://github.com/EdiGlacUQ/fenics_ice.git
 
 2. To install via `Conda`_ use `install.sh`_, this script will install and test FEniCS_ice.
-Be sure to set **CONDA_HOME** before installing, and add::
+Be sure to set **CONDA_HOME** before installing, and add the line below to your .bashrc::
 
     export FENICS_ICE_BASE_DIR="/path/to/fenics_ice/repo"
-
-to your .bashrc.
 
 3. Run install.sh.
 
@@ -54,7 +52,6 @@ to your .bashrc.
 
     mpirun -n 2 pytest -v --order-scope=module --color=yes
 
-
 To install via Mamba:
 ---------------------
 
@@ -65,7 +62,6 @@ To install via Mamba:
     pip install -e .
 
 Make sure the environment "fenics_ice" is activated.
-
 2. Install `tlm_adjoint`_::
 
     git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
