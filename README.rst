@@ -48,45 +48,45 @@ to your .bashrc.
 
 3. Run install.sh.
 
-4. Run all serial tests.
+4. Run all serial tests::
 
 .. code-block:: bash
-pytest -v --order-scope=module --color=yes
+    pytest -v --order-scope=module --color=yes
 
-5. Run all parallel tests.
+5. Run all parallel tests::
 
 .. code-block:: bash
-mpirun -n 2 pytest -v --order-scope=module --color=yes
+    mpirun -n 2 pytest -v --order-scope=module --color=yes
 
 
 To install via Mamba:
 ---------------------
 
-1. Clone the repository and create `Mamba`_ environment:
+1. Clone the repository and create `Mamba`_ environment::
 
 .. code-block:: bash
-cd fenics_ice
-mamba env create -f environment.yml
-pip install -e .
+    cd fenics_ice
+    mamba env create -f environment.yml
+    pip install -e .
 
 Make sure the environment "fenics_ice" is activated.
 
-2. Install `tlm_adjoint`_:
+2. Install `tlm_adjoint`_::
 
 .. code-block:: bash
-git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
-cd tlm_adjoint
-pip install -e .
+    git clone https://github.com/EdiGlacUQ/tlm_adjoint.git
+    cd tlm_adjoint
+    pip install -e .
 
-3. Run all serial tests.
-
-.. code-block:: bash
-pytest -v --order-scope=module --color=yes
-
-4. Run all parallel tests.
+3. Run all serial tests::
 
 .. code-block:: bash
-mpirun -n 2 pytest -v --order-scope=module --color=yes
+    pytest -v --order-scope=module --color=yes
+
+4. Run all parallel tests::
+
+.. code-block:: bash
+    mpirun -n 2 pytest -v --order-scope=module --color=yes
 
 
 Code source
